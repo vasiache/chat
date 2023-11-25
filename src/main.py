@@ -3,8 +3,8 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-open_ai_token = "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"
-tg_token="5984179394:AAEpplgueY6_wlgMllafDxkO_kLIcVdsfHQ"
+open_ai_token = " "
+tg_token=" "
 
 openai.api_key=open_ai_token
 bot=Bot(tg_token)
