@@ -1,0 +1,28 @@
+version: '3'
+services:
+  tgChat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILD_IMAGE=chat:latest
+    container_name: tgChatv2
+    image: chat:latest
+    volumes:
+      - ./src/:/chat/
+    working_dir: /chat
+    command: ["python", "/chat/main.py"]
+    network_mode: "host"
+    restart: unless-stopped
+#   tgChat:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     container_name: tgChatv2
+#     image: chat:latest
+#     volumes:
+#       - ./src/:/chat/
+#     working_dir: /chat
+#     command: ["python", "/chat/main.py"]
+#     network_mode: "host"
+#     # restart: unless-stopped ###
